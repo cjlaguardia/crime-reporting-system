@@ -1,0 +1,129 @@
+<?php
+include('connect.php');
+session_start();
+if (isset($_POST['submit'])) {
+        $cap=$_POST['captcha_code'];
+        if ($cap == $_SESSION["captcha_code"])
+    {   
+
+
+        $reporter_id=$_SESSION['reporter_id'];
+        $name_victim = $_POST['name_victim'];
+
+        $abuse_victim=$_POST['abuse_victim'];
+
+        $age_victim=$_POST['age_victim'];
+        $gender_victim=$_POST['gender_victim'];
+        $date_victim=$_POST['date_victim'];
+        $address_victim=$_POST['address_victim'];
+
+        $name_suspect=$_POST['name_suspect'];
+        $gender_suspect=$_POST['gender_suspect'];
+        $address_suspect=$_POST['address_suspect'];
+        $status="pending";
+        $report_date=date("Y/m/d");
+        $file_name =basename($_FILES["fileToUpload"]["name"]);
+        
+       $sql = "INSERT INTO report(status,name_victim,abuse_victim,age_victim,gender_victim,date_victim,address_victim,name_suspect,gender_suspect,address_suspect,report_date,file_name,reporter_id) VALUES ('$status','$name_victim','$abuse_victim','$age_victim','$gender_victim','$date_victim','$address_victim','$name_suspect','$gender_suspect','$address_suspect','$report_date','$file_name','$reporter_id')";
+       
+       
+        $query = mysqli_query($con, $sql);
+    
+
+        if ($query) {
+            echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Report Sent!');
+        window.location.href='index.php';
+         </script>");
+            
+            // upload image only if query is succesfull
+
+            $target_dir = "uploads/";
+            $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+
+
+
+
+
+
+            $project =$name_victim;
+
+$dirname = "uploads/";
+mkdir($dirname.$project, 0777, true);
+
+
+if (isset($_FILES["fileToUpload"]["name"]))
+    {
+        move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "$dirname/$project/" . $_FILES["fileToUpload"]["name"]);
+        $image = "uploads/$project/" . $_FILES["fileToUpload"]["name"];
+    }
+
+            $uploadOk = 1;
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+if(isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        $uploadOk = 1;
+       
+                
+    } else {
+        echo "File is not an image.";
+         echo "<script>alert('File Is Not an Image!);</script>";
+        $uploadOk = 0;
+    }
+}
+
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "Sorry, file already exists.";
+    $uploadOk = 0;
+}
+
+// Allow certain file formats
+if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+&& $imageFileType != "gif" ) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+}
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOk == 0) {
+    echo "Sorry, your file was not uploaded.";
+
+
+// if everything is ok, try to upload file
+} else {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+        
+    } else {
+        echo "Sorry, there was an error uploading your file.";
+    }
+}
+
+}
+
+else
+{
+        echo "<script>alert('Boloooooooooook!!');</script>";
+        echo "$reporter_id"
+
+        ;
+        error_reporting(E_ALL);
+        
+}
+
+
+}else{
+            
+            
+            echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Wrong Captcha!');
+        window.location.href='report.php?error=WrongCaptcha';
+         </script>");
+        }
+
+    }  
+
+
+
+?>

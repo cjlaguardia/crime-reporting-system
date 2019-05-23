@@ -1,0 +1,245 @@
+body
+{
+
+	background: url() no-repeat center center fixed;	
+	background-size: cover;
+}
+
+table tr td
+{
+	text-align: center;
+}
+.mainwrapper
+{
+	margin: auto;
+	width: 81%;
+}
+
+a
+{
+text-decoration: none;
+}
+
+.login
+{
+text-align: right;
+
+}
+
+.h1n1
+{
+	color: #8B0000;
+}
+
+.aboutus
+{
+	margin: auto;
+	width: 50%;
+}
+
+.reportable
+{
+	margin: auto;
+	text-align: center;
+
+}
+.reportable input
+{
+	text-align: center;
+
+}
+.viewreport
+{
+	margin: auto;
+	padding: 0;
+
+}
+
+.viewreport table
+{
+	text-align: center;
+	margin: auto;
+	padding: 0;
+	width: 60%;
+	margin-top: 2%;
+}
+
+.viewreportpub
+{
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  margin-top: 3%;
+}
+
+.adminview
+{
+  margin: auto;
+  text-align: center;
+  margin-top: 2%;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+ 
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+li button {
+  display: block;
+   background-color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+  border: none;
+  margin-top: 1.5%;
+}
+
+li button:hover:not(.active) {
+  background-color: #111;
+}
+
+
+.loginlogin
+{
+	margin-top: 0.7%;
+	float: right;
+	text-align: center;
+	color: white;
+
+}
+
+.loginlogin button
+{
+	background-color: #333;
+	color: white;
+	border: none;
+}
+
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+table#t01 th {
+  background-color: #333;
+  color: white;
+}
+
+.logo
+   {
+    margin: 0;
+    text-align: center;
+    padding: 0;
+   }
+
+   .holy {
+  background-color:  #333;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  height: 100%;
+  color: white;
+}
+.holy input[type=text], .holy input[type=password],.holy input[type=email],.holy input[type=number] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.holy input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+   .holyreport {
+  background-color:  #333;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  height: 100%;
+  color: white;
+}
+.holyreport input[type=text], .holyreport input[type=password],.holyreport input[type=email],.holyreport input[type=number] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  margin-left: 7%;
+  text-align: center;
+
+}
+
+.holyreport input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.holyreport h1
+{
+	margin: auto;
+	text-align: center;
+}
+
+.holyreport h2
+{
+	margin: auto;
+	text-align: center;
+}
+.holyreport h3
+{
+	margin: auto;
+	text-align: center;
+}

@@ -1,0 +1,32 @@
+<?php
+include('navbar.php');
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+	<div class="aboutus">
+	<center><h2>Women And Children Center</h2>
+    <h2>Del Carmen, Iligan City, Lanao del Norte</h6>
+    <h1 class="h1n1"> VISION : </h1>
+    <b><p>WOMEN AND CHILDER IN ILIGAN CITY ARE EDUCATED HEALTHY VALUE ORIENTED, IMPORVED, FREE FROM
+    	ANY FORMS OF ABUSE, NURTURED BY A RESPONSIBLE PARENTTS, ENJOYING A WHOLESOME QUALITY OF LIFE
+    LIVING IN A SAVE AND SECURED GENDER FAIR IN A CHILD FRIENDLY SOCIETY. </p> <br>
+    <h1 class="h1n1"> MISSION: </h1>
+    <p>TO DEVELOP THE FULL POTENTIAL OF WOMEN AND CHILDREN THROUGH PROMPT AND ADEQUATE SERVICE DELIVERY
+    	THE ACTIVE PARTICIPANTS OF PARENTS AND CHILDREN IN GOVERNANCE BY SUSTAINING COORDINATIVE INTEGRATIVE
+    EFFORTS AMONG STAKE HOLDERS IN JUST AND HUMANE SOCIETY.</p>
+    <h1 class="h1n1">GOALS</h1>
+    <p>BY THE YEAR 2029 WOMEN AND CHILDREN IN ILIGAN CITY WILL BE FREE FROM ALL FORMS OF 
+    ABUSE AND ABLE TO LIVE BY ENJOYING THEIR RIGHTS AND PRIVILEGES.</p></b>
+</center>
+</div>
+
+
+
+
+</body>
+</html>
